@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1800">
+    <title>AWS Dashboard — Cristian Robledo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; padding: 2rem; }
+        header { text-align: center; margin-bottom: 2rem; }
+        header h1 { color: #00d4ff; font-size: 1.8rem; }
+        header p { color: #666; font-size: 0.85rem; margin-top: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+        .card { background: #0d0d1a; border: 1px solid #1a1a3e; border-radius: 12px; padding: 1.5rem; transition: border-color 0.3s; }
+        .card:hover { border-color: #00d4ff; }
+        .card .icon { font-size: 2rem; margin-bottom: 0.8rem; }
+        .card h3 { color: #a0a0c0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .card .value { font-size: 1.6rem; font-weight: bold; color: #ffffff; }
+        .card .sub { font-size: 0.85rem; color: #666; margin-top: 0.4rem; }
+        .status-ok { color: #00ff88; }
+        .status-warn { color: #ffaa00; }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; margin-top: 0.5rem; }
+        .badge.online { background: #00331a; color: #00ff88; border: 1px solid #00ff88; }
+        .badge.offline { background: #330000; color: #ff4444; border: 1px solid #ff4444; }
+        footer { text-align: center; margin-top: 3rem; color: #333; font-size: 0.8rem; }
+        footer a { color: #00d4ff; text-decoration: none; }
+        .updated { text-align: center; color: #444; font-size: 0.8rem; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ AWS Infrastructure Dashboard</h1>
+        <p>Cristian Robledo Macleood · Ingeniero en Informática · Cloud & DevOps</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <div class="icon">🖥️</div>
+            <h3>Servidor EC2</h3>
+            <div class="value">⛔ Detenido</div>
+            <div class="sub">Tipo: t3.micro · sa-east-1</div>
+            <span class="badge offline">stopped</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <h3>Almacenamiento S3</h3>
+            <div class="value">✅ 2 archivos</div>
+            <div class="sub">Tamaño total: 4.5 KB</div>
+            <span class="badge online">Activo</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>CPU (últimas 3h)</h3>
+            <div class="value">⚠️ Sin datos</div>
+            <div class="sub">CloudWatch · AWS/EC2</div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Región AWS</h3>
+            <div class="value" style="font-size:1.2rem;">América del Sur</div>
+            <div class="sub">São Paulo · sa-east-1</div>
+            <span class="badge online">Disponible</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐙</div>
+            <h3>Portafolio</h3>
+            <div class="value">12 proyectos</div>
+            <div class="sub"><a href="https://github.com/10101985" target="_blank" style="color:#00d4ff;">github.com/10101985</a></div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔄</div>
+            <h3>Última actualización</h3>
+            <div class="value" style="font-size:1rem;">19/07/2026 12:48 UTC</div>
+            <div class="sub">Actualización automática cada 30 min</div>
+            <span class="badge online">GitHub Actions</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            <a href="https://10101985.github.io/web-portfolio-personal" target="_blank">Portfolio</a> ·
+            <a href="https://github.com/10101985" target="_blank">GitHub</a> ·
+            <a href="https://linkedin.com/in/cristian-robledo-macleood-7538331b5" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
